@@ -1,0 +1,16 @@
+# basic_theme
+name: Basic theme
+type: theme
+description: Basic theme for Drupal 8 with bootstrap
+core: 8.x
+version: '8.x-1.0'
+libraries:
+  - basic_theme/global-styling
+regions:
+  header: Header
+  menu_bar: 'Menu bar'
+  content: Content  # the content region is required
+  sidebar: 'Sidebar'
+  footer: Footer
+
+screenshot: screen.png
