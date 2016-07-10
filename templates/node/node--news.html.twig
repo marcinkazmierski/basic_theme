@@ -17,6 +17,31 @@
         {% endif %}
     </header>
     <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-        {{ content|without('comment', 'links') }}
+
+        <ul>
+            <li>
+                {{ render_image(node, 'field_image') }} {# dependencies: Custom twig extensions module. #}
+                <img src="{{ render_image(node, 'field_image', 'small') }}"> {# dependencies: Custom twig extensions module. #}
+            </li>
+            <li>
+                {{ node.field_teaser.value|customtwigfilter }} {# dependencies: Custom twig extensions module. #}
+            </li>
+            <li>
+                {{ node.field_teaser.value }}
+            </li>
+            <li>
+                {{ node.field_content.value|raw }}
+            </li>
+            <li>
+                {{ file_url(node.field_image.entity.uri.value) }}
+            </li>
+            <li>
+                <a href="{{ path('entity.node.canonical', {'node': node.id}) }}">
+                    <img src="{{ file_url(node.field_image.entity.uri.value) }}">
+                    {{ 'View node page'|t }}
+                </a>
+            </li>
+        </ul>
+
     </div>
 </article>
