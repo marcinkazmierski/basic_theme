@@ -37,7 +37,7 @@
             </li>
             <li>
                 <a href="{{ path('entity.node.canonical', {'node': node.id}) }}">
-                    <img src="{{ file_url(node.field_image.entity.uri.value) }}">
+                    <img src="{{ file_url(node.field_image.entity.uri.value) }}" alt="{{ node.field_image.alt }}">
                     {{ 'View node page'|t }}
                 </a>
             </li>

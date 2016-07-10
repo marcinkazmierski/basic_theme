@@ -1,0 +1,14 @@
+<div id="heading-{{ row.index }}">
+    <h4 class="panel-title">
+        <a href="{{ fields.path.content|remove_html_comments }}">
+            {{ fields.title.content }}
+        </a>
+    </h4>
+
+    <div>
+        {{ fields.field_image.content }}
+    </div>
+    <div class="panel-body">
+        {{ fields.field_teaser.content }}
+    </div>
+</div>
