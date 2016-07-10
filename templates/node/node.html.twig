@@ -27,6 +27,6 @@ view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
         {% endif %}
     </header>
     <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
-        {{ content }}
+        {{ content|without('comment', 'links') }}
     </div>
 </article>
