@@ -4,7 +4,7 @@ function basic_theme_form_system_theme_settings_alter(&$form, \Drupal\Core\Form\
     if (isset($form_id)) {
         return;
     }
-
+    // TODO: only fo example
     $form['foo_example'] = array(
         '#type'          => 'textfield',
         '#title'         => t('Widget'),
